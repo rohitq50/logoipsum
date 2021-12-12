@@ -18,8 +18,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", href: '/bootstrap-5/css/bootstrap.min.css'}
+    ],
+    script: [
+      { src: '/bootstrap-5/js/bootstrap.bundle.min.js', body: true}
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -43,5 +47,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    loaders: {
+      sass: {
+        implementation: require('sass'),
+      },
+      scss: {
+        implementation: require('sass'),
+      },
+    },
   }
 }
